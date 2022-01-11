@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap');
+
+:root {
+    --bc-conteiner: hsl(257, 40%, 49%); 
+    --cl-flexh1: #fefffd;
+    --cl-flexp: #fff6ff;
+    --co-button: #68599c;
+    --bs-button: #573e92;
+    --bc-buttohover: hsl(300, 69%, 71%); 
+    --bs-buttonhover: #553e90;
+    --cl-buttonhover: #fff4ff;
+    --cl-social: #fffffa;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configurando o body */
+
+body {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Configurando o conteiner */
+
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    max-width: 380px;
+    background-image: url('images/bg-mobile.svg');
+    background-size: cover;
+    background-color: var(--bc-conteiner);
+}
+
+.logo img {
+    width: 130px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    margin-right: 120px;
+}
+
+/* Configurando os itens da div flex */
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.flex img {
+    width: 300px;
+    padding: 10px 20px;
+}
+
+.flex-text h1 {
+    font-size: 18px;
+    width: 200px;
+    margin-bottom: 20px;
+    color: var(--cl-flexh1);
+}
+
+.flex-text p {
+    font-size: 13px;
+    width: 266px;
+    margin-bottom: 15px;
+    color: var(--cl-flexp);
+}
+
+
+.flex-text button {
+    padding: 9px 60px;
+    border-radius: 50px;
+    border: none;
+    color: var(--bc-conteiner);
+    box-shadow: 0 0 10px var(--bs-button);
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+
+/* Configurando as redes socias */
+
+
+.social {
+    display: flex;
+    margin-bottom: 20px;
+    margin-right: 25px;
+}
+
+.social a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--cl-social);
+}
+
+
+@media (min-width:768px) {
+    body {
+        margin-bottom: 20px;
+    }
+
+    .conteiner {
+        width: 800px;
+    }
+}
+
+@media (min-width:1024px) {
+    .conteiner {
+        min-width: 900px;
+    }
+
+    .logo img {
+        margin-right: 600px;
+    }
+
+
+    .flex {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .flex-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .flex-text p {
+        width: 400px;
+    }
+
+    .flex-text button {
+        width: 200px;
+    }
+
+    .flex-text button:hover {
+        background-color: var(--bc-buttohover);
+        box-shadow: 6px 6px 8px var(--bs-buttonhover);
+        color: var(--cl-buttonhover);
+        transition: all 0.1s ease-in-out;
+    }
+    
+
+
+    .flex img {
+        width: 400px;
+    }
+
+    .social {
+        margin-left: 700px;
+    }
+}
